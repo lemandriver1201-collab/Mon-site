@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Drivers Léman Luxe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Drivers Léman Luxe</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <button onclick="setLang('fr')">FR</button>
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('de')">DE</button>
+        </div>
+    </header>
+
+    <section class="contact">
+        <h1 data-i18n="contact_title">Contactez-nous</h1>
+        <form>
+            <input type="text" placeholder="Nom" required data-i18n="name">
+            <input type="text" placeholder="Prénom" required data-i18n="firstname">
+            <input type="tel" placeholder="Téléphone" required data-i18n="phone">
+            <input type="email" placeholder="Email" required data-i18n="email">
+            <textarea placeholder="Votre message" required data-i18n="message"></textarea>
+            <button type="submit" data-i18n="send">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Drivers Léman Luxe. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

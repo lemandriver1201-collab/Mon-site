@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivers Léman Luxe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Drivers Léman Luxe</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <button onclick="setLang('fr')">FR</button>
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('de')">DE</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1 data-i18n="title">Votre chauffeur privé haut de gamme à Genève</h1>
+            <p data-i18n="subtitle">Discrétion, ponctualité et professionnalisme pour tous vos trajets</p>
+        </div>
+    </section>
+
+    <section class="reservation">
+        <h2 data-i18n="reservation">Réservation</h2>
+        <form>
+            <input type="text" placeholder="Lieu de prise en charge" data-i18n="pickup">
+            <input type="text" placeholder="Destination" data-i18n="dropoff">
+            <input type="number" placeholder="Passagers" data-i18n="passengers">
+            <input type="datetime-local" data-i18n="datetime">
+            <button type="submit" data-i18n="book">Réserver</button>
+        </form>
+    </section>
+
+    <section class="services">
+        <div class="service-card">
+            <h3 data-i18n="airport">Transferts aéroport</h3>
+            <p data-i18n="airport_desc">Un chauffeur vous attend avec une pancarte pour un voyage sans stress.</p>
+        </div>
+        <div class="service-card">
+            <h3 data-i18n="private">Transferts privés & professionnels</h3>
+            <p data-i18n="private_desc">Des trajets élégants et confortables adaptés à vos besoins.</p>
+        </div>
+        <div class="service-card">
+            <h3 data-i18n="dispo">Mise à disposition</h3>
+            <p data-i18n="dispo_desc">Contactez-nous via WhatsApp pour un devis personnalisé.</p>
+            <a href="https://wa.me/41787098800" target="_blank" class="whatsapp-btn">WhatsApp</a>
+        </div>
+        <div class="service-card">
+            <h3 data-i18n="mountain">Transferts montagne</h3>
+            <p data-i18n="mountain_desc">Des véhicules spacieux pour 8 passagers, valises et skis inclus.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Drivers Léman Luxe. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
