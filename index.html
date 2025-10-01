@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Driver Léman — Chauffeur privé Genève</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Driver Léman</div>
+    <div class="lang-select" id="lang-select">
+      <button data-lang="fr" class="lang active">FR</button>
+      <button data-lang="en" class="lang">EN</button>
+      <button data-lang="de" class="lang">DE</button>
+    </div>
+    <button id="hamburger" class="hamburger" aria-label="Menu">☰</button>
+  </header>
+
+  <nav id="drawer" class="drawer" aria-hidden="true">
+    <ul>
+      <li><a href="#home" data-scroll>Accueil</a></li>
+      <li><a href="#reservation" data-scroll>Réserver</a></li>
+      <li><a href="contact.html">Contactez-nous</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home" class="hero" role="banner" aria-label="Présentation">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 id="title">Driver Léman</h1>
+        <p id="tagline">Idéalement situé en plein cœur de Genève, laissez-vous transporter par notre flotte de véhicules haut de gamme. Que ce soit pour trajets d’affaires, transferts aéroport ou déplacements vers la montagne — discrétion, ponctualité et professionnalisme sont nos maîtres mots.</p>
+      </div>
+    </section>
+
+    <section id="reservation" class="reservation-section">
+      <div class="reservation-box">
+        <h2>Réservez votre trajet</h2>
+        <form id="booking-form" onsubmit="return false;">
+          <label>Lieu de prise en charge
+            <input id="pickup" placeholder="Entrez une adresse ou un lieu" autocomplete="off" />
+          </label>
+          <label>Lieu de destination
+            <input id="dropoff" placeholder="Entrez une adresse ou un lieu" autocomplete="off" />
+          </label>
+          <label>Nombre de passagers
+            <select id="passengers">
+              <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
+            </select>
+          </label>
+          <label>Date & heure
+            <input id="datetime" type="datetime-local" />
+          </label>
+          <div class="actions">
+            <button id="calc-btn" class="btn">Calculer les options & prix</button>
+            <button id="reset-btn" type="reset" class="btn outline">Réinitialiser</button>
+          </div>
+          <div id="result" class="result" hidden>
+            <p id="distance-text"></p>
+            <p id="price-text"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Driver Léman — <a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Chargement dynamique de Google Maps JavaScript API avec clé intégrée
+    const GM_API_KEY = "AIzaSyDnBzL0DDiixr4OhVYOBZ5VFoauk64CVvI"; // clé fournie
+    const callbackName = "initAutocomplete";
+    const s = document.createElement('script');
+    s.src = `https://maps.googleapis.com/maps/api/js?key=${GM_API_KEY}&libraries=places&callback=${callbackName}`;
+    s.async = true; s.defer = true;
+    document.head.appendChild(s);
+  </script>
+</body>
+</html>
